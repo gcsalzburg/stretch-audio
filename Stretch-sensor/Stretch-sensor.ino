@@ -2,8 +2,8 @@
 const int stretch_pin = A5;
 
 // Set max and min levels for stretch detection
-const int min_level = 420;
-const int max_level = 580;
+const int min_level = 370;
+const int max_level = 490;
 
 void setup() {
   Serial.begin(115200);
