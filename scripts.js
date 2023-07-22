@@ -4,7 +4,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
 	if(!('serial' in navigator)){
-		alert("Web Serial API is not supported on this device (or you are not using https://). Make sure you're running Chrome or Edge and have enabled the #enable-experimental-web-platform-features flag in chrome://flags or edge://flags")
+		alert("Web Serial API is not supported on this device")
 	}
 
 	// Setup canvas
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			reader = port.readable
 				.pipeThrough(new TextDecoderStream())
 				.pipeThrough(new TransformStream(new LineBreakTransformer('\r\n')))
-				.getRe nader()
+				.getReader()
 			startReadLoop()
 		
 			const encoder = new TextEncoderStream()
